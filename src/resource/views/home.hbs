@@ -1,1 +1,20 @@
-<h1>HOME PAGE</h1>
+<div class="mt-4">
+    <div class="row">
+    {{#each course}}
+        <div class="col-sm-6 col-lq-4">
+            <div class="card" style="width: 18rem;">
+                <a href="/course/{{this.slug}}">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/{{this.videoId}}"></iframe>
+                </a>
+                <div class="card-body">
+                    <a href="/course/{{this.slug}}">
+                        <h5 class="card-title">{{this.name}}{{this.level}}</h5>
+                    </a>
+                    <p class="card-text">{{this.content}}</p>
+                    <a href="#" class="btn btn-primary">Study</a>
+                </div>
+            </div>
+        </div>
+    {{/each}}
+    </div>
+</div>
